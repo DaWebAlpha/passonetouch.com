@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/header', {title: 'Home'})%>
+  
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('../../partials/loginnav', { username }) %>
+  <div class="container mt-5 pt-5">
+    <h2>Welcome , <%= username %>!</h2>
+
+    <h3 class="mt-4">Your Taken Exams</h3>
+    <% if (takenExams && takenExams.length) { %>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Score</th>
+            <th>Details</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% takenExams.forEach(exam => { %>
+            <tr>
+              <td><%= exam.examTitle %></td>
+              <td><%= exam.score %></td>
+              <td><a href="/users/adII/results/<%= exam._id %>">View</a></td>
+              <td>
+                <form method="POST" action="/users/adII/reset/<%= exam._id %>">
+                  <button type="submit" class="btn btn-danger btn-sm">Reset</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <p><strong>Average Score:</strong> <%= averageScore %></p>
+    <% } else { %>
+      <p>You haven't taken any exams yet.</p>
+    <% } %>
+
+    <a href="/users/adII/exams" class="btn btn-primary mt-3">Take New Exam</a>
+  </div>
+</body>
+</html>

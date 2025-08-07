@@ -1,0 +1,24 @@
+<%- include('../partials/header', { title: 'Active Users' }) %>
+<%- include('../partials/loginnav') %>
+
+<<!-- div class="container mt-5">
+    <h2><%= title %></h2>
+
+    <% if (error) { %>
+      <p class="text-danger"><%= error %></p>
+    <% } else if (users.length === 0) { %>
+      <p>No users currently online.</p>
+    <% } else { %>
+      <ul class="list-group">
+        <% users.forEach(user => { %>
+          <li class="list-group-item">
+            <%= user.username %> - <%= user.email %> - <%= user.examType %>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+</div> -->
+
+<%= console.log(users)%>
+<%- include('../partials/footer') %>

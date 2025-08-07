@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+
+  <form action="/users/read-notes" method="POST">
+    <input type="text" name="command" placeholder="e.g. read me teaching methods" required>
+    <button type="submit">Read</button>
+  </form>
+
+  <% if (answer) { %>
+    <p><strong>AI Response:</strong> <%= answer %></p>
+  <% } %>
+</body>
+</html>

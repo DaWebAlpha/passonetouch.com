@@ -1,0 +1,145 @@
+// Import reset styles (make sure you have _reset.scss in the same folder or adjust the path)
+@use 'reset';
+
+// Color variables
+$color-primary: lightblue;   // remove space, CSS color names should not have spaces
+$color-text: #fff;
+$color-black: #333;
+
+// Font family
+$font-family-base: 'Raleway', Arial, sans-serif;
+
+// Font weights
+$font-weight-light: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+
+// Font sizes
+$font-size-smaller: 1.2rem;
+$font-size-small: 1.5rem;
+$font-size-medium: 1.8rem;
+$font-size-x-medium: 2.1rem;
+$font-size-large: 3rem;
+$font-size-x-large: 3.5rem;
+$font-size-xx-large: 4rem;
+
+:root{
+    --color-primary: var($color-primary);
+    --color-text: var(--color-text);
+    --color-black: var(--color-black);
+
+    --font-family-base: var($font-family-base);
+
+    --font-weight-light: var($font-weight-light);
+    --font-weight-bold: var($font-weight-bold);
+    --font-weight-bolder: var($font-weight-bolder);
+
+     //Font sizes
+    --font-size-smaller: var($font-size-smaller);
+    --font-size-small: var($font-size-small);
+    --font-size-medium: var($font-size-medium);
+    --font-size-x-medium: var($font-size-x-medium);
+    --font-size-large: var(--font-size-large);
+    --font-size-x-large: var(--font-size-x-large);
+    --font-size-xx-large: var(--font-size-xx-large)
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.password-wrapper,
+.password-wrapper1 {
+  position: relative;
+}
+.password-toggle,
+.password-toggle1 {
+  position: absolute;
+  top: 70%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
+  width: 2rem;             /* fixed width */
+  height: 2rem; 
+  z-index: 2;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle i {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+input[type="password"] {
+  height: 45px;
+  line-height: 1.5;
+}
+
+    
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Password strength message box */
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+

@@ -1,0 +1,239 @@
+<%- include('partials/header', {title:'Sign Up'})%>
+
+<%- include('partials/subnav')  %>
+
+<style>
+.pulsing-button {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+</style>
+<main role="main">
+    <section class="py-5">
+      
+    </section>
+    <section class="register py-5 my-5" id="register">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="d-flex align-items-center justify-content-center py-3">
+            <a href="/users/try/home"><button class="btn btn-outline-danger fw-bold fs-5 pulsing-button">Try Before Signing Up</button></a>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                    <header>
+                      <h1 class="text-center mb-4" id="registerHeading">Register</h1>
+                    </header>
+                    <form
+                        action="/pay" 
+                        method="POST" 
+                        autocomplete="off" 
+                        aria-labelledby="registerHeading" 
+                        role="form" 
+                        novalidate>
+
+
+                      <div class="form-group mb-4">
+                        <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+                        <input 
+                          type="text" 
+                          name="username" 
+                          id="username"
+                          class="form-control"
+                          placeholder="Enter username"
+                          required 
+                          aria-required="true"
+                          aria-describedby="usernameHelp">
+                        <div class="validateNameMessage" class="form-text"></div>
+                      </div>
+                    
+                      <div class="form-group mb-4">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input 
+                          type="email" 
+                          name="email" 
+                          id="email"
+                          class="form-control"
+                          placeholder="Enter email" 
+                          required 
+                          aria-required="true"
+                          aria-describedby="emailHelp">
+                        <div  class="form-text validateEmailMessage"></div>
+                      </div>
+                    
+                      <div class="form-group mb-4">
+                        
+                        <label for="teachers" class="form-label">Select Teachers Exams Type</label>
+                        <select id="teachers" name="examType" class="form-select" required>
+                          <option value="" disabled selected>Select Exams Type</option>
+                          <option value="Principal Superintendent">Principal Superintendent</option>
+                          <option value="Assistant Director II">Assistant Director II</option>
+                          <option value="Assistant Director I">Assistant Director I</option>
+                          <option value="Deputy Director">Deputy Director</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group mb-4 password-wrapper">
+                        <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                        <input 
+                          type="password" 
+                          name="password" 
+                          id="password"
+                          class="form-control"
+                          placeholder="Enter password" 
+                          required 
+                          aria-required="true"
+                          aria-describedby="passwordHelp">
+                        <div id="passwordHelp" class="form-text validatePassword"></div>
+                        <span class="password-toggle" id="togglePassword" role="button" aria-label="Toggle password visibility">
+                          <i class="fas fa-eye"></i>
+                        </span>
+                        <div id="message">
+
+                          <h3>Password must contain the following:</h3>
+                          <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                          <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                          <p id="number" class="invalid">A <b>number</b></p>
+                          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                          <p id="symbol" class="invalid">A <b>symbol</b> (e.g. !@#$%^&*)</p>
+                        </div>
+                      
+                      
+                      
+                      </div>
+                    
+                      <div class="form-group mb-4 password-wrapper1">
+                        <label for="confirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                        <input
+                          type="password"
+                          name="confirmPassword"
+                          id="confirmPassword"
+                          class="form-control"
+                          placeholder="Confirm password"
+                          required 
+                          aria-required="true"
+                          aria-describedby="confirmPasswordHelp">
+                        <div  class="form-text validateConfirmPassword"></div>
+                        <span class="password-toggle1" id="togglePassword1" role="button" aria-label="Toggle password visibility">
+                          <i class="fas fa-eye"></i>
+                        </span>
+                      </div>
+                    
+                      <% if (error) { %>
+                        <div class="alert alert-danger mt-2" role="alert">
+                          <%- error %>
+                        </div>
+                      <% } %>
+                      
+                      <div class="d-grid">
+                        <p class="text-center text-danger fs-5">You will pay a one time fee of 1 cedis </p>
+                        <button type="submit" class="btn btn-primary" aria-label="Submit registration form">Register</button>
+                      </div>
+                    </form>
+                  
+                    <p class="mt-3" role="note">Already have an account? <a href="/login">Login</a></p>
+                </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<%- include('partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

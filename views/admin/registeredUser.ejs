@@ -1,0 +1,37 @@
+<%- include('../partials/header', {title: 'Registered Users'}) %>
+<%- include('../partials/nav') %>
+  <div class="container mt-5 pt-5">
+    <h2 class="mb-4">Registered Users</h2>
+    <% if (error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+    <% } else if (users.length === 0) { %>
+      <p>No users found.</p>
+    <% } else { %>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach((user, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= user.username %></td>
+              <td><%= user.email %></td>
+              <td>
+                <form action="/admin/users/<%= user.username %>?_method=DELETE" method="POST">
+                  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+    <a href="admin/home"><button href="/admin/home" class="btn btn-outline-primary">Back To Admin Page</button></a>
+  </div>
+<%- include('../partials/footer') %>

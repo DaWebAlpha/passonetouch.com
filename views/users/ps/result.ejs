@@ -1,0 +1,28 @@
+<%- include('../../partials/header') %>
+<%- include('../../partials/loginnav') %>
+
+<div class="container mt-5 pt-5">
+  <a href="/users/ps" class="btn btn-secondary mb-3">Back To Dashboard</a>
+  <h2>Exam: <%= result.examTitle %></h2>
+  <h6><strong>Score:</strong> <%= result.score %> out of <%= total %></h6>
+  
+  <ul class="list-group mt-4">
+    <% result.answers.forEach((ans, index) => { 
+         const q = questions.find(q => q.id === ans.questionId); 
+    %>
+      <li class="list-group-item">
+        <strong>Q<%= index + 1 %>:</strong> <%= q ? q.question : 'Unknown question' %> <br>
+        
+        <strong>Correct Answer:</strong> <%= ans.correctAnswer || 'Unavailable' %> <br>
+
+        <% if(ans.isCorrect) { %>
+          <strong>Your Answer:</strong> <%= ans.answerGiven  %> <span class="badge bg-success">Correct</span><br>
+        <% } else { %>
+          <strong>Your Answer:</strong> <%= ans.answerGiven  %> <span class="badge bg-danger">Incorrect</span><br>
+        <% } %>
+      </li>
+    <% }) %>
+  </ul>
+</div>
+
+<%- include('../../partials/footer') %>

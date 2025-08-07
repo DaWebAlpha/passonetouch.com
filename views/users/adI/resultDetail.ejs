@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/header', { title: 'Result Detail' }) %>
+</head>
+<body>
+  <%- include('../../partials/loginnav') %>
+  
+  <div class="container pt-5 mt-5">
+    <a href="/users/adI" class="btn btn-secondary mt-3">Back To DashBoard</a>
+    <h2>Exam: <%= result.examTitle %></h2>
+    <p><strong>Score:</strong> <%= result.score %></p>
+    <ul class="list-group">
+      <% result.answers.forEach(ans => { 
+           const q = questions.find(q => q.id === ans.questionId); 
+           const p = questions.find(p => p.id === ans.questionId);       %>
+        <li class="list-group-item">
+          <strong>Q<%= ans.questionId + 1 %>: </strong> <%= q ? q.question : 'Unknown question' %><br>
+          <strong>Correct Answer: </strong><%= p ? p.answer : "Unknown answer" %><br>
+          <strong>Your Answer: </strong> <%= ans.answerGiven %> 
+          <% if (ans.isCorrect) { %>
+            <span class="text-success">✅Correct</span>
+          <% } else { %>
+            <span class="text-danger">✘Wrong</span>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="/users/adI" class="btn btn-secondary mt-3">Back to Dashboard</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<%- include('partials/header', {title: 'Login Page'}) %>
+  <style>
+      .password-toggle {
+        position: absolute;
+        right: 1rem;
+        top: 75%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6c757d;
+      }
+
+      .form-group {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      .headerText {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+<%- include('partials/subnav')  %>
+    <main role="main">
+        <section class="login py-5 mt-5" id="login">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <header class="header">
+                        <h1 class="headerText" id="loginHeading">Login</h1>
+                      </header>
+<!-- https://passonetouch.com  -->
+                      <form
+                        action="/login"
+                        method="POST"
+                        role="form"
+                        novalidate
+                        autocomplete="off"
+                        aria-labelledby="loginHeading"
+                      >
+                        <div class="form-group">
+                          <label for="username" class="form-label">Username</label>
+                          <input
+                            type="text"
+                            name="username"
+                            class="form-control"
+                            id="username"
+                            aria-describedby="usernameHelp"
+                            autocomplete="username"
+                            required
+                          />
+                          
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label">Password</label>
+                          <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Enter password"
+                            aria-describedby="passwordHelp"
+                            autocomplete="current-password"
+                            required
+                          />
+                          <div id="passwordHelp" class="form-text validatePassword"></div>
+                          <span 
+                            class="password-toggle" 
+                            id="togglePassword" 
+                            role="button" 
+                            aria-label="Toggle password visibility"
+                            title="Toggle password visibility"
+                          >
+                            <i class="fas fa-eye"></i>
+                          </span>
+                        </div>
+                        <div class="validateNameMessage form-text"></div>
+                        <% if (error) { %>
+                          <div class="alert alert-danger mt-2" id="error-message" role="alert">
+                            <%= error %>
+                          </div>
+                        <% } %>
+
+                        <div class="d-grid">
+                          <button type="submit" class="btn btn-primary" aria-label="Submit login form">Login</button>
+                        </div>
+
+                        <div class="form-group d-flex justify-content-between mt-3">
+                          <span>
+                            <a href="/register" aria-label="Sign up link">Sign Up</a>
+                          </span>
+                          <span>
+                            <a href="/forgot-password" aria-label="Forgot password link">Lost Password?</a>
+                          </span>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/loginFooter') %>

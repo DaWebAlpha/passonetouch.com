@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/header', {title: 'Available Exams'}) %>
+</head>
+<body>
+  <%- include('../../partials/loginnav', { username }) %>
+  <div class="container py-5 my-5">
+    <a href="/users/dd" class="btn btn-secondary mt-4">Back To Dashboard</a>
+    <h2>Available Exams</h2>
+    <% if (exams && exams.length) { %>
+      <ul class="list-group">
+        <% exams.forEach(exam => { 
+          const durationMinutes = Math.floor((exam.duration || 600) / 60); // fallback to 10 mins
+        %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <strong><%= exam.title %></strong>
+              <br>
+              <small class="text-muted">⏱ Duration: <%= durationMinutes %> mins</small>
+            </div>
+            <a href="/users/dd/exams/<%= exam._id %>" class="btn btn-success btn-sm">Start</a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No exams available at the moment.</p>
+    <% } %>
+  </div>
+</body>
+</html>
