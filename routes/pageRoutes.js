@@ -9,6 +9,19 @@ const router = express.Router();
 
 
 
+router.get('/privacy', (req, res)=>{
+  res.render('privacy', {title: 'Pricay Policy'})
+})
+
+
+router.get('/terms', (req, res)=>{
+  res.render('terms', {title: 'Terms of use'})
+})
+
+
+router.get('/cookies', (req, res)=>{
+  res.render('cookies', {title: 'Cookie Policy'})
+})
 // Home
 router.get('/', (req, res) => {
   res.render('home', { title: 'Home' });
