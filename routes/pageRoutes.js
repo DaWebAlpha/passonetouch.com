@@ -238,6 +238,32 @@ router.get('/users/adII', ensureUser(), async (req, res) => {
   }
 });
 
+
+/* Link to past Questions */
+router.get('/users/adII/pastQuestions', ensureUser(), (req, res) =>{
+  res.render('users/adII/pastQuestions')
+})
+
+
+router.get('/pastQo/adII2020', ensureUser(), (req, res) =>{
+  res.render('users/adII/pastQo/adII2020')
+})
+
+
+router.get('/pastQo/adII2021', ensureUser(), (req, res) =>{
+  res.render('users/adII/pastQo/adII2021')
+})
+
+
+
+router.get('/exams', async (req, res) => {
+  const exams = await Exams.find({ examType: 'Try' });
+  res.render('users/try/exams', {
+    title: 'Available Exams',
+    exams,
+  });
+});
+
 // ADII - List available exams
 router.get('/users/adII/exams', ensureUser(), async (req, res) => {
   const exams = await Exams.find({ examType: 'Assistant Director II' });

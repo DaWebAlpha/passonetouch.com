@@ -7,262 +7,325 @@ dotenv.config()
 await mongoose.connect(process.env.MONGO_URI)
 
 await Exams.create({
-  title: "Assistant Director II test 12",
+  title: "Assistant Director II test 19",
   examType: "Assistant Director II",
   questions:[
   {
     "id": 0,
-    "question": "In Ghanaian schools, the performance of a learner can best be evaluated through ………….. assessments.",
-    "options": { "a": "annually", "b": "daily", "c": "monthly", "d": "weekly" },
-    "answer": "daily",
+    "question": "A good teacher is one who",
+    "options": {
+      "a": "gives useful information",
+      "b": "inspires students to learn",
+      "c": "gives printed notes to students",
+      "d": "explains concepts and principles"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 1,
-    "question": "What does the term ‘equal educational opportunities’ mean?",
+    "question": "Attitudes, actions and appearances in the context of classroom communication are considered as:",
     "options": {
-      "a": "All children have access to education",
-      "b": "All children have access to quality teaching and learning resources",
-      "c": "All children have the type of education which is suitable for their peculiar needs.",
-      "d": "All of the above"
+      "a": "Verbal",
+      "b": "Irrational",
+      "c": "Impersonal",
+      "d": "Non-verbal"
     },
-    "answer": "All of the above",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 2,
-    "question": "Which one of the following refers to a situation where a learner studies simply because work is assigned by the teacher?",
+    "question": "Identify the important element a teacher has to take cognizance of while addressing students in a classroom.",
     "options": {
-      "a": "Cognitive memorizing",
-      "b": "Experimental learning",
-      "c": "Sensory learning",
-      "d": "None of the above"
+      "a": "Fixed posture",
+      "b": "Voice modulation",
+      "c": "Repetitive pause",
+      "d": "Avoidance of proximity"
     },
-    "answer": "Cognitive memorizing",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 3,
-    "question": "An assessment that is conducted before the start of teaching or instructions is called ………… assessment.",
-    "options": { "a": "diagnostic", "b": "formal", "c": "formative", "d": "summative" },
-    "answer": "diagnostic",
+    "question": "Internal and external factors that affect message reception by the students in the classroom are referred to as",
+    "options": {
+      "a": "noise",
+      "b": "feedback",
+      "c": "fragmentation",
+      "d": "channelization"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 4,
-    "question": "The models based on the philosophy that learning occurs when there are changes in mental structure are called ………………. learning models.",
-    "options": { "a": "effective", "b": "cognitive", "c": "knowledge", "d": "psychomotor" },
-    "answer": "cognitive",
+    "question": "Which of the following statement is correct?",
+    "options": {
+      "a": "Communicator should be soft spoken",
+      "b": "Communicator should have fine senses",
+      "c": "Communicator should have tolerance power",
+      "d": "Communicator should have good personality"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 5,
-    "question": "Which of the following is/are termed student-centered learning methods?",
+    "question": "Which of the following statement is correct?",
     "options": {
-      "a": "I and II only",
-      "b": "I, II, and III",
-      "c": "II and III only",
-      "d": "II only"
+      "a": "Validity ensures reliability",
+      "b": "Reliability ensures validity",
+      "c": "Reliability does not depend on objectivity",
+      "d": "Reliability and validity are independent of each other"
     },
-    "answer": "II and III only",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 6,
-    "question": "The office of the Ministry of Education that houses the Education Management Information System (EMIS) data is",
+    "question": "The most appropriate purpose of learning is __________",
     "options": {
-      "a": "Administration and General Services",
-      "b": "Education Reform Secretariat",
-      "c": "Free Senior High School Secretariat",
-      "d": "Statistics, Research, and Information Management (SRIM)"
+      "a": "personal adjustment",
+      "b": "modification of behaviour",
+      "c": "social and political awareness",
+      "d": "preparing oneself for employment"
     },
-    "answer": "Statistics, Research, and Information Management (SRIM)",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 7,
-    "question": "The type of test that measures the performance of test takers against the criteria covered in the curriculum is called",
+    "question": "According to Swami Vivekananda, teacher's success depends on:",
     "options": {
-      "a": "aptitude test",
-      "b": "criterion-referenced test",
-      "c": "diagnostic test",
-      "d": "norm-referenced test"
+      "a": "His professional training and creativity",
+      "b": "His renunciation of personal gain and service to others",
+      "c": "His mastery on the subject and capacity in controlling the students",
+      "d": "His concentration on his work and duties with a spirit of obedience to God"
     },
-    "answer": "criterion-referenced test",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 8,
-    "question": "Teachers could be made accountable when they are given",
+    "question": "The primary responsibility for the teacher’s adjustment lies with",
     "options": {
-      "a": "freedom in the selection of content and methods of teaching",
-      "b": "opportunities for professional growth",
-      "c": "training in teaching and examination",
-      "d": "transfer to places where they want to serve"
+      "a": "The principal",
+      "b": "The children",
+      "c": "The community",
+      "d": "The teacher himself"
     },
-    "answer": "freedom in the selection of content and methods of teaching",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 9,
-    "question": "When using a problem-solving method, the teacher can",
+    "question": "If a parent approaches the teacher to do some favour to his/her ward in the examination, the teacher should",
     "options": {
-      "a": "help the learners define what is to be solved",
-      "b": "propose ways of obtaining the needed data",
-      "c": "set up the problem",
-      "d": "test the conclusion"
+      "a": "try to help him",
+      "b": "refuse politely and firmly",
+      "c": "ask him rudely to go away",
+      "d": "ask him not to talk in those terms"
     },
-    "answer": "help the learners define what is to be solved",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 10,
-    "question": "Which of the following is/are important in gender equality?",
+    "question": "When some students are deliberately attempting to disturb the discipline of the class by making mischief, what will be your role as a teacher?",
     "options": {
-      "a": "Equal opportunities for males and females",
-      "b": "Equal pay for men and women for the same work done",
-      "c": "Girls receiving the same level of education as boys",
-      "d": "All the above"
+      "a": "Isolate those students.",
+      "b": "Expelling those students.",
+      "c": "Reform the group with your authority.",
+      "d": "Giving them an opportunity for introspection and improve their behaviour."
     },
-    "answer": "All the above",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 11,
-    "question": "The Government of Ghana introduced the Capitation Grant Scheme at the beginning of the 2005/2006 academic year with the primary purpose to",
+    "question": "Dynamic approach to teaching means",
     "options": {
-      "a": "demolish the School Management Committee arrangement",
-      "b": "discontinue schools from forming canteen committees",
-      "c": "make school more open to the public",
-      "d": "replace all kinds of fees that were payable by children enrolled in schools"
+      "a": "Teaching should be forceful and effective",
+      "b": "Teachers should be energetic and dynamic",
+      "c": "The topics of teaching should not be static, but dynamic",
+      "d": "The students should be required to learn through activities"
     },
-    "answer": "replace all kinds of fees that were payable by children enrolled in schools",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 12,
-    "question": "The Professional requirements of a teacher as explained by UNESCO is/are",
+    "question": "At the primary school stage, most of the teachers should be women because they",
     "options": {
-      "a": "innovativeness in approach and teaching strategies",
-      "b": "justice to the teaching profession",
-      "c": "mastery over the subject and competency for teaching",
-      "d": "All of the above"
+      "a": "are available on lower salaries.",
+      "b": "can teach children better than men.",
+      "c": "know basic content better than men.",
+      "d": "can deal with children with love and affection."
     },
-    "answer": "All of the above",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 13,
-    "question": "A junior high school teacher wants her students to acquire a specific skill to undertake a practical task required. Which of the following teaching methods would be the most appropriate?",
+    "question": "CLASS stands for",
     "options": {
-      "a": "Demonstration",
-      "b": "Discussion",
-      "c": "Recitation",
-      "d": "Role-play"
+      "a": "Complete Literacy and Studies in Schools",
+      "b": "Computer Literacy and Studies in Schools",
+      "c": "Centre for Literacy and Studies in Schools",
+      "d": "Computer Literates and Students in Schools"
     },
-    "answer": "Demonstration",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 14,
-    "question": "Which of the factors predict improvements in senior high school student learning outcomes?",
+    "question": "Dyslexia is associated with",
     "options": {
-      "a": "Learning style",
-      "b": "School environment",
-      "c": "Socio-Cultural background",
-      "d": "All of the above"
+      "a": "writing disorder",
+      "b": "mental disorder",
+      "c": "reading disorder",
+      "d": "behavioural disorder"
     },
-    "answer": "All of the above",
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 15,
-    "question": "The standards-based curriculum was rolled out for the primary schools in Ghana in the academic year 2017/2018.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "False",
+    "question": "Which of the following is not a prescribed level of teaching?",
+    "options": {
+      "a": "Memory",
+      "b": "Reflective",
+      "c": "Differentiation",
+      "d": "Understanding"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 16,
-    "question": "A person who has been exposed to an infectious illness may be quarantined to see if they will become sick.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "Greater the handicap of the students coming to the educational institutions, greater the demand on the:",
+    "options": {
+      "a": "State",
+      "b": "Teacher",
+      "c": "Society",
+      "d": "Family"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 17,
-    "question": "The aim of schooling is not to develop individual students, but to develop their social, cultural, and economic capital for the advancement of society as a whole.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "Most often, the teacher - student communication is:",
+    "options": {
+      "a": "Critical",
+      "b": "Utilitarian",
+      "c": "Spurious",
+      "d": "Confrontational"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 18,
-    "question": "The release of a teacher from one Directorate of Education to another in the GES system presently depends, in part, on the approval of the teacher’s current District Director of Education.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "A teacher in a classroom has immediate control over",
+    "options": {
+      "a": "the audience, the noise and the reception.",
+      "b": "the feedback, the technology and the audience experience.",
+      "c": "the self, selected methods of communication and the message.",
+      "d": "the communication channel, other communicators, and external factors."
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 19,
-    "question": "The Ministry of Education aims to achieve universal access to free, quality, and equitable education for all Ghanaians by 2030.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "The present annual examination system:",
+    "options": {
+      "a": "promotes rote learning",
+      "b": "does not promote good study habits",
+      "c": "does not encourage students to be regular in class",
+      "d": "all the above"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 20,
-    "question": "Effective teaching requires the continuous professional development of teachers in both content knowledge and pedagogical skills.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "Which of the following statements is correct?",
+    "options": {
+      "a": "Syllabus is a part of curriculum.",
+      "b": "Syllabus is an annexure to curriculum.",
+      "c": "Curriculum is the same in all educational institutions affiliated to a particular university.",
+      "d": "Syllabus is not the same in all educational institutions affiliated to a particular university."
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 21,
-    "question": "It is necessary for teachers to understand the emotional and social needs of their students in order to help them develop holistically.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "Discussion Method can be used when:",
+    "options": {
+      "a": "The topic is easy",
+      "b": "The topic is difficult",
+      "c": "The topic is very difficult",
+      "d": "All of the above"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 22,
-    "question": "In a student-centered classroom, the teacher takes the role of a facilitator, guiding students to construct their own learning.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "Micro teaching is most effective for the student-teacher:",
+    "options": {
+      "a": "before the practice-teaching",
+      "b": "during the practice-teaching",
+      "c": "after the practice-teaching",
+      "d": "none of the above"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
   },
   {
     "id": 23,
-    "question": "The use of digital tools in the classroom is a key factor in promoting active and collaborative learning among students.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
+    "question": "An effective teacher is one who can:",
+    "options": {
+      "a": "control the class",
+      "b": "motivate students to learn",
+      "c": "correct the assignments carefully",
+      "d": "give more information in less time"
+    },
+    "answer": "",
     "score": 1,
     "selectedOption": ""
-  }
+  },
+  
 ]
+
+
 })
 
 console.log("Printed Successfully")

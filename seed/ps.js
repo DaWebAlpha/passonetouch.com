@@ -1,286 +1,325 @@
 import mongoose from '../config/db.js';
 import { Exams } from '../models/examModel.js';
 
+// Connect to database
 await mongoose.connect(process.env.MONGO_URI);
 
 await Exams.create({
-  title: "Principal Superintendent Test 7",
+  title: "Principal Superintendent Test 28",
   examType: 'Principal Superintendent',
-  questions: [
+  questions : 
+   [
   {
-    "id": 0,
-    "question": "The Ghana Teacher Prize Award 2023 was organized at which place?",
-    "options": {
-      "a": "Ghana Secondary Technical School (GSTS), Takoradi",
-      "b": "Accra International Conference Center",
-      "c": "Cape Coast University",
-      "d": "Kumasi Technical Institute"
+    id: 0,
+    question: "According to John Dewey, schools must prepare students for",
+    options: {
+      a: "research",
+      b: "future life",
+      c: "present life",
+      d: "entrepreneurship"
     },
-    "answer": "Ghana Secondary Technical School (GSTS), Takoradi",
-    "score": 1,
-    "selectedOption": ""
+    answer: "present life",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 1,
-    "question": "The prize award given to the outstanding teacher in Ghana Teacher Prize 2023 was ______________",
-    "options": {
-      "a": "A car",
-      "b": "A house worth 450,000.00",
-      "c": "Cash prize of 100,000",
-      "d": "Scholarship for further studies"
+    id: 1,
+    question: "Children are usually egocentric during ________ and _________ stages.",
+    options: {
+      a: "Sensorimotor, Preoperational",
+      b: "Formal operational, Sensorimotor",
+      c: "Preoperational, Concrete operational",
+      d: "Concrete operational, Formal operational"
     },
-    "answer": "A house worth 450,000.00",
-    "score": 1,
-    "selectedOption": ""
+    answer: "Sensorimotor, Preoperational",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 2,
-    "question": "The end-of-term examination conducted in schools are largely ______________",
-    "options": {
-      "a": "Standardized Tests",
-      "b": "Formative Tests",
-      "c": "Summative Tests",
-      "d": "Diagnostic Tests"
+    id: 2,
+    question: "The Waldorf education approach emphasizes a balanced development of",
+    options: {
+      a: "head and heart",
+      b: "heart and hands",
+      c: "head and hands",
+      d: "head, heart, and hands"
     },
-    "answer": "Standardized Tests",
-    "score": 1,
-    "selectedOption": ""
+    answer: "head, heart, and hands",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 3,
-    "question": "GES is responsible for providing quality education in Ghana at which levels?",
-    "options": {
-      "a": "Basic and secondary education",
-      "b": "Tertiary education",
-      "c": "Pre-primary education only",
-      "d": "Adult education only"
+    id: 3,
+    question: "The standard deviation is the __________ of the variance.",
+    options: {
+      a: "cube",
+      b: "cube root",
+      c: "square",
+      d: "square root"
     },
-    "answer": "Basic and secondary education",
-    "score": 1,
-    "selectedOption": ""
+    answer: "square root",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 4,
-    "question": "Which year did Ghana introduce the Free Senior High School (SHS) policy?",
-    "options": {
-      "a": "2015",
-      "b": "2016",
-      "c": "2017",
-      "d": "2018"
+    id: 4,
+    question: "The idea of teaching the whole child in the “philosophy of pragmatism in education” means teaching students to be good",
+    options: {
+      a: "citizens",
+      b: "thinkers",
+      c: "learners",
+      d: "scientists"
     },
-    "answer": "2017",
-    "score": 1,
-    "selectedOption": ""
+    answer: "citizens",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 5,
-    "question": "The main goal of the STEM education policy in Ghana is to ______________",
-    "options": {
-      "a": "Promote science, technology, engineering, and mathematics",
-      "b": "Increase teacher salaries",
-      "c": "Focus on the arts",
-      "d": "Build more schools in rural areas"
+    id: 5,
+    question: "Curriculum revision should be a/an __________ process.",
+    options: {
+      a: "gradual",
+      b: "abrupt",
+      c: "relative",
+      d: "continuous"
     },
-    "answer": "Promote science, technology, engineering, and mathematics",
-    "score": 1,
-    "selectedOption": ""
+    answer: "continuous",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 6,
-    "question": "The 4Rs introduced in Ghana’s new basic education curriculum stand for ______________",
-    "options": {
-      "a": "Reading, wRiting, aRithmetic, and Responsibility",
-      "b": "Respect, Responsibility, Rights, and Rules",
-      "c": "Recreation, Reflection, Research, and Responsibility",
-      "d": "Reading, Recreation, Rights, and Research"
+    id: 6,
+    question: "The advocators of philosophy of Pragmatism believe that reality is",
+    options: {
+      a: "stagnant",
+      b: "imagination",
+      c: "related to mind",
+      d: "constantly changing"
     },
-    "answer": "Reading, wRiting, aRithmetic, and Responsibility",
-    "score": 1,
-    "selectedOption": ""
+    answer: "constantly changing",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 7,
-    "question": "Which of the following is not part of the core values of GES?",
-    "options": {
-      "a": "Professionalism",
-      "b": "Discipline",
-      "c": "Excellence",
-      "d": "Corruption"
+    id: 7,
+    question: "According to the law of effect, if a stimulus results (SR) in a negative outcome, the SR bond is",
+    options: {
+      a: "stabilized",
+      b: "weakened",
+      c: "unsterilized",
+      d: "strengthened"
     },
-    "answer": "Corruption",
-    "score": 1,
-    "selectedOption": ""
+    answer: "weakened",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 8,
-    "question": "Continuous Professional Development (CPD) for teachers in Ghana is aimed at ______________",
-    "options": {
-      "a": "Improving teacher effectiveness and learning outcomes",
-      "b": "Increasing teacher salaries",
-      "c": "Building new classrooms",
-      "d": "Recruiting more teachers"
+    id: 8,
+    question: "The technique of classroom management where the teacher punishes negative behaviors by removing an unruly student from the rest of the class is called",
+    options: {
+      a: "satiation technique",
+      b: "time out technique",
+      c: "corporal punishment",
+      d: "extinction technique"
     },
-    "answer": "Improving teacher effectiveness and learning outcomes",
-    "score": 1,
-    "selectedOption": ""
+    answer: "time out technique",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 9,
-    "question": "The National Teachers’ Standards were developed by ______________",
-    "options": {
-      "a": "GES and NaCCA",
-      "b": "MoE and T-TEL",
-      "c": "GTEC and NAB",
-      "d": "UNESCO and UNICEF"
+    id: 9,
+    question: "An assessment is __________ if it consistently achieves the same results with the same (or similar) students.",
+    options: {
+      a: "Valid",
+      b: "Invalid",
+      c: "Reliable",
+      d: "Unreliable"
     },
-    "answer": "MoE and T-TEL",
-    "score": 1,
-    "selectedOption": ""
+    answer: "Reliable",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 10,
-    "question": "Ghana Teacher Prize 2023 was held in which region?",
-    "options": {
-      "a": "Western Region",
-      "b": "Greater Accra Region",
-      "c": "Ashanti Region",
-      "d": "Volta Region"
+    id: 10,
+    question: "Which from the following is NOT a formal assessment?",
+    options: {
+      a: "Project",
+      b: "Quizzes",
+      c: "Interview",
+      d: "Observation"
     },
-    "answer": "Western Region",
-    "score": 1,
-    "selectedOption": ""
+    answer: "Observation",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 11,
-    "question": "Which organization funds GALOP in Ghana?",
-    "options": {
-      "a": "World Bank",
-      "b": "UNESCO",
-      "c": "IMF",
-      "d": "Ghana Government"
+    id: 11,
+    question: "According to Socrates, physical objects and events are __________ of their ideal form.",
+    options: {
+      a: "signs",
+      b: "parts",
+      c: "images",
+      d: "shadows"
     },
-    "answer": "World Bank",
-    "score": 1,
-    "selectedOption": ""
+    answer: "shadows",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 12,
-    "question": "The main aim of the School Feeding Programme in Ghana is to ______________",
-    "options": {
-      "a": "Reduce malnutrition and increase school enrollment",
-      "b": "Provide employment for caterers",
-      "c": "Support local farmers",
-      "d": "Train head teachers"
+    id: 12,
+    question: "The simplest skill in cognitive domain of Bloom’s taxonomy is",
+    options: {
+      a: "evaluating",
+      b: "synthesizing",
+      c: "remembering",
+      d: "understanding"
     },
-    "answer": "Reduce malnutrition and increase school enrollment",
-    "score": 1,
-    "selectedOption": ""
+    answer: "remembering",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 13,
-    "question": "The GES Promotion Examination mainly assesses ______________",
-    "options": {
-      "a": "Professionalism, knowledge, and performance",
-      "b": "Creativity and innovation",
-      "c": "Classroom teaching only",
-      "d": "Communication skills only"
+    id: 13,
+    question: "An assessment used to identify difficulties in the learning process is called",
+    options: {
+      a: "initial assessment",
+      b: "formative assessment",
+      c: "diagnostic assessment",
+      d: "summative assessment"
     },
-    "answer": "Professionalism, knowledge, and performance",
-    "score": 1,
-    "selectedOption": ""
+    answer: "diagnostic assessment",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 14,
-    "question": "The current Education Minister in Ghana is ______________",
-    "options": {
-      "a": "Yaw Osei Adutwum",
-      "b": "Dr. Matthew Opoku Prempeh",
-      "c": "Prof. Kwasi Opoku-Amankwa",
-      "d": "John Dumelo"
+    id: 14,
+    question: "The book Emile or “On Education” on the nature of education and man is written by",
+    options: {
+      a: "Plato",
+      b: "Aristotle",
+      c: "Rousseau",
+      d: "John Dewey"
     },
-    "answer": "Yaw Osei Adutwum",
-    "score": 1,
-    "selectedOption": ""
+    answer: "Rousseau",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 15,
-    "question": "The Ghana Tertiary Education Commission (GTEC) was formed in 2020.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 15,
+    question: "A scoring guide used to evaluate the quality of students is called",
+    options: {
+      a: "rubrics",
+      b: "checklists",
+      c: "inventories",
+      d: "rating scales"
+    },
+    answer: "rubrics",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 16,
-    "question": "Teachers can nominate themselves for the Ghana Teacher Prize.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 16,
+    question: "Jean Piaget proposed __________ stages of Cognitive Development.",
+    options: {
+      a: "1",
+      b: "2",
+      c: "3",
+      d: "4"
+    },
+    answer: "4",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 17,
-    "question": "The GES Council consists of 20 members.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "False",
-    "score": 1,
-    "selectedOption": ""
+    id: 17,
+    question: "Responses that produce a satisfying effect in a particular situation become __________ to occur again in that situation.",
+    options: {
+      a: "not likely",
+      b: "less likely",
+      c: "more likely",
+      d: "equally likely"
+    },
+    answer: "more likely",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 18,
-    "question": "Photosynthesis is the process through which trees absorb carbon dioxide and give out oxygen.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 18,
+    question: "The truth of the conclusion of an inductive argument is",
+    options: {
+      a: "certain",
+      b: "probable",
+      c: "experience",
+      d: "observation"
+    },
+    answer: "probable",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 19,
-    "question": "The Ghana Accountability for Learning Outcomes Project (GALOP) focuses on improving education in high-performing schools.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "False",
-    "score": 1,
-    "selectedOption": ""
+    id: 19,
+    question: "According to Jean Piaget, children are no longer egocentric when entering",
+    options: {
+      a: "Sensorimotor stage",
+      b: "Preoperational stage",
+      c: "Formal operational stage",
+      d: "Concrete operational stage"
+    },
+    answer: "Concrete operational stage",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 20,
-    "question": "The GES approved age for voluntary retirement starts at 45 years.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 20,
+    question: "Rousseau advocated an educational method which consisted of removing the child from",
+    options: {
+      a: "school",
+      b: "burden",
+      c: "society",
+      d: "past memory"
+    },
+    answer: "society",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 21,
-    "question": "The Ministry of Education is responsible for the formulation of national education policies.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 21,
+    question: "Plato believed that talent and intelligence are",
+    options: {
+      a: "distributed genetically",
+      b: "distributed gender-wise",
+      c: "not distributed genetically",
+      d: "not distributed gender-wise"
+    },
+    answer: "distributed genetically",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 22,
-    "question": "The Ghana Education Service governs pre-tertiary education policies.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 22,
+    question: "The philosopher who for the first time mentioned the importance of play (or sports) in education was",
+    options: {
+      a: "Plato",
+      b: "Aristotle",
+      c: "Socrates",
+      d: "John Locke"
+    },
+    answer: "Plato",
+    score: 1,
+    selectedOption: ""
   },
   {
-    "id": 23,
-    "question": "Formative evaluation is used to monitor learning progress.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
-  },
-  {
-    "id": 24,
-    "question": "NaCCA stands for National Council for Curriculum and Assessment.",
-    "options": { "a": "True", "b": "False" },
-    "answer": "True",
-    "score": 1,
-    "selectedOption": ""
+    id: 23,
+    question: "The concept of pragmatism in educational philosophy says that education should be about",
+    options: {
+      a: "virtue",
+      b: "obedience",
+      c: "life and growth",
+      d: "shaping good citizens"
+    },
+    answer: "life and growth",
+    score: 1,
+    selectedOption: ""
   }
 ]
 
